@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
 
 export const estilos = (tema) => {
   return StyleSheet.create({
@@ -12,6 +11,12 @@ export const estilos = (tema) => {
     titulo: {
       fontSize: 25,
       fontWeight: 'bold',
+      color: tema.branco,
+      marginBottom: 20,
+    },
+    subtitulo: {
+      fontSize: 18,
+      fontWeight: '400',
       color: tema.branco,
       marginBottom: 20,
     },
@@ -28,7 +33,6 @@ export const estilos = (tema) => {
       marginBottom: 15,
       padding: 10,
       borderRadius: 5,
-      color: tema.preto,
     },
     botao: {
       height: 40,
@@ -43,15 +47,6 @@ export const estilos = (tema) => {
       fontSize: 18,
       fontWeight: '400',
       color: tema.preto,
-    },
-    iconArea: {
-      position: 'absolute',
-      top: Constants.statusBarHeight + 10,
-      right: 20,
-    },
-    icon: {
-      color: tema.branco,
-      fontSize: 30,
     },
   });
 }
