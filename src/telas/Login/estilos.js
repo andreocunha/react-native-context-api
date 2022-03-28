@@ -24,7 +24,7 @@ export const estilos = (tema) => {
     input: {
       height: 40,
       width: '90%',
-      backgroundColor: tema.branco,
+      backgroundColor: tema.input,
       marginBottom: 15,
       padding: 10,
       borderRadius: 5,
@@ -33,7 +33,7 @@ export const estilos = (tema) => {
     botao: {
       height: 40,
       width: 100,
-      backgroundColor: '#A3FEBF',
+      backgroundColor: tema.botao,
       borderRadius: 5,
       alignItems: 'center',
       justifyContent: 'center',

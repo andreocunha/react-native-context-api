@@ -12,7 +12,6 @@ export async function pegarProdutos(){
 }
 
 export async function salvarProduto(produto){
-  console.log(produto)
   try {
       await api.post(`/produtos`, produto);
       return 'sucesso'

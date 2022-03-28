@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { GlobalContext } from '../../Context/GlobalContext';
 import { estilos } from './estilos'
 
-export default function Produto({item}) {
+export function Produto({item}) {
 
   const {
     viuProduto
@@ -11,7 +11,7 @@ export default function Produto({item}) {
 
   return (
     <View style={estilos.cartao}>
-      <Image style={estilos.imagem} source={{uri: item.url}}/>
+      <Image style={estilos.imagem} source={item.imagem}/>
       <View style={estilos.textoContainer}>
         <Text style={estilos.texto}>{item.texto}</Text>
         <Text style={estilos.preco}>{item.preco}</Text>

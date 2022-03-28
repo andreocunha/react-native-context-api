@@ -4,6 +4,8 @@ const dark = {
     branco: '#FFFFFF',
     preto: '#000000',
     ultimosVistos: '#093245',
+    botao: '#A3FEBF',
+    input: '#FFFFFF',
   }
   
 const light = {
@@ -12,6 +14,8 @@ const light = {
     branco: '#051933',
     preto: '#FFFFFF',
     ultimosVistos: '#ccefff',
+    botao: '#2a663c',
+    input: '#0b2a52',
 }
 
 export { dark, light };

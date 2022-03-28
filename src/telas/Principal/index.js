@@ -1,27 +1,10 @@
 import { Text, View, FlatList, StatusBar } from 'react-native';
-import Produto from '../../componentes/Produto';
+import { Produto } from '../../componentes/Produto';
 import { GlobalContext } from '../../Context/GlobalContext';
 import { estilos } from './estilos';
 import { useContext } from 'react';
 import { Feather } from 'react-native-vector-icons'
-
-const produto = {
-  url: "https://static.vecteezy.com/ti/vetor-gratis/p1/4331717-sneaker-flat-design-long-shadow-glyph-icon-running-shoes-vector-silhouette-illustration-vetor.jpg",
-  texto: "Tenis bacana",
-  preco: "R$ 100,00",
-}
-
-const produtos = [
-  produto,
-  produto,
-  produto,
-  produto,
-  produto,
-  produto,
-  produto,
-  produto,
-  produto,
-]
+import { produtos } from './produtos';
 
 export default function Principal() {
   const {
@@ -53,6 +36,7 @@ export default function Principal() {
         keyExtractor={item => Math.random()}
         renderItem={({ item }) => <Produto item={item} />}
         style={estilo.lista}
+        showsVerticalScrollIndicator={false}
         ListHeaderComponent={() =>
           <View>
             {ultimosVistos.length > 0 &&
@@ -64,9 +48,10 @@ export default function Principal() {
                   renderItem={({ item }) => <Produto item={item} />}
                   style={estilo.lista}
                   horizontal
+                  showsHorizontalScrollIndicator={false}
                 />
               </View>}
-            <Text style={estilo.titulo}>Produtos</Text>
+            <Text style={[estilo.titulo, { paddingLeft: 16 }]}>Produtos</Text>
           </View>
         }
       />
