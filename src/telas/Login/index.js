@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Text, View, TextInput, TouchableOpacity, StatusBar } from 'react-native';
-import { GlobalContext } from "../../Context/GlobalContext";
+import { AutenticacaoContext } from "../../Context/AutenticacaoContext";
+import { TemaContext } from "../../Context/TemaContext";
 import { estilos } from './estilos';
 import MaterialCommunityIcons from 'react-native-vector-icons/Feather';
 
@@ -9,14 +10,17 @@ export default function Login({ navigation }) {
   const [senha, setSenha] = useState("");
 
   const {
+    login,
+  } = useContext(AutenticacaoContext);
+
+  const {
     temas,
-    login
-  } = useContext(GlobalContext);
+  } = useContext(TemaContext);
 
   const estilo = estilos(temas);
 
-  function logandoNoSistema(){
-    const resultado = login(email, senha);
+  async function logandoNoSistema(){
+    const resultado = await login(email, senha);
     if(resultado === 'ok'){
       navigation.navigate('Principal');
     }

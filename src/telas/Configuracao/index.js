@@ -1,14 +1,14 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Text, View, Switch } from 'react-native';
-import { GlobalContext } from "../../Context/GlobalContext";
+import { TemaContext } from "../../Context/TemaContext";
 import { estilos } from './estilos';
 
 export default function Configuracao({ navigation }) {
   const {
     temas,
     tema,
-    setTema,
-  } = useContext(GlobalContext);
+    setTemaAtual,
+  } = useContext(TemaContext);
 
   const estilo = estilos(temas);
 
@@ -22,7 +22,7 @@ export default function Configuracao({ navigation }) {
         trackColor={{ false: "#767577", true: "#81b0ff" }}
         thumbColor={tema === 'dark' ? "#f5dd4b" : "#f4f3f4"}
         ios_backgroundColor="#3e3e3e"
-        onValueChange={() => setTema(tema === 'dark' ? 'light' : 'dark')}
+        onValueChange={() => setTemaAtual(tema === 'dark' ? 'light' : 'dark')}
         value={tema === 'dark'}
       />
       </View>

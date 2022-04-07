@@ -1,13 +1,13 @@
 import { Text, View, Image, TouchableOpacity } from 'react-native';
 import { useContext } from 'react';
-import { GlobalContext } from '../../Context/GlobalContext';
+import { ProdutosContext } from '../../Context/ProdutosContext';
 import { estilos } from './estilos'
 
 export function Produto({item}) {
 
   const {
     viuProduto
-  } = useContext(GlobalContext);
+  } = useContext(ProdutosContext);
 
   return (
     <View style={estilos.cartao}>
