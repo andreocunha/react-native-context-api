@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Text, View, TextInput, TouchableOpacity, StatusBar } from 'react-native';
-import { AutenticacaoContext } from "../../Context/AutenticacaoContext";
-import { TemaContext } from "../../Context/TemaContext";
+import { AutenticacaoContext } from "../../contexts/AutenticacaoContext";
+import { TemaContext } from "../../contexts/TemaContext";
 import { estilos } from './estilos';
 import MaterialCommunityIcons from 'react-native-vector-icons/Feather';
 

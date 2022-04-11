@@ -13,11 +13,22 @@ export async function pegarProdutos(){
 
 export async function salvarProduto(produto){
   try {
-      await api.post(`/produtos`, produto);
-      return 'sucesso'
+      const resultado = await api.post(`/produtos`, produto);
+      return resultado.data
   }
   catch (error){
-      console.log(error)
-      return 'erro'
+        console.log(error)
+        return {}
   }
+}
+
+export async function removerProduto(produto){
+    try {
+        await api.delete(`/produtos/${produto.id}`);
+        return 'sucesso'
+    }
+    catch (error){
+        console.log(error)
+        return 'erro'
+    }
 }

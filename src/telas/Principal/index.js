@@ -1,8 +1,8 @@
 import { Text, View, FlatList, StatusBar, TouchableOpacity } from 'react-native';
 import { Produto } from '../../componentes/Produto';
-import { ProdutosContext } from '../../Context/ProdutosContext';
-import { AutenticacaoContext } from '../../Context/AutenticacaoContext';
-import { TemaContext } from '../../Context/TemaContext';
+import { ProdutosContext } from '../../contexts/ProdutosContext';
+import { AutenticacaoContext } from '../../contexts/AutenticacaoContext';
+import { TemaContext } from '../../contexts/TemaContext';
 import { estilos } from './estilos';
 import { useContext } from 'react';
 import { Feather } from 'react-native-vector-icons'
