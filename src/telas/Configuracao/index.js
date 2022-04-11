@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Text, View, Switch } from 'react-native';
 import { TemaContext } from "../../contexts/TemaContext";
 import { estilos } from './estilos';

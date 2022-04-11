@@ -12,7 +12,7 @@ export const estilos = (tema) => {
     titulo: {
       fontSize: 25,
       fontWeight: 'bold',
-      color: tema.branco,
+      color: tema.texto,
       marginBottom: 20,
     },
     inputArea: {
@@ -50,7 +50,7 @@ export const estilos = (tema) => {
       right: 20,
     },
     icon: {
-      color: tema.branco,
+      color: tema.texto,
       fontSize: 30,
     },
   });
